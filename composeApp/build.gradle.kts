@@ -117,6 +117,7 @@ kotlin {
 
             implementation(libs.multiplatform.settings)
 implementation(libs.kotlinx.datetime)
+            implementation(libs.primitive.adapters)
 
         }
         iosMain.dependencies {
