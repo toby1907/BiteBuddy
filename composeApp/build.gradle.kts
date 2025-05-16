@@ -71,7 +71,11 @@ kotlin {
                         add(projectDirPath)
                     }
                 }
+
+                  
+
             }
+
         }
         binaries.executable()
     }
@@ -191,7 +195,7 @@ sqldelight{
     databases{
         create("BiteBuddyAppDb"){
             packageName.set("org.example.project")
-            generateAsync = true
+            generateAsync.set(true)
         }
     }
 }
