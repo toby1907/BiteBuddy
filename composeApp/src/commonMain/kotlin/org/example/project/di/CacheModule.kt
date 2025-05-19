@@ -2,7 +2,7 @@ package org.example.project.di
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import org.example.project.features.app.common.data.database.DbHelper
+import org.example.project.features.common.data.database.DbHelper
 import org.example.project.features.app.common.data.database.daos.FavoriteRecipeDao
 import org.example.project.features.app.common.data.database.daos.RecipeDao
 import org.koin.dsl.module
@@ -13,7 +13,7 @@ fun cacheModule()  = module {
     single<CoroutineContext> { Dispatchers.Default }
     single { CoroutineScope(get()) }
     single { RecipeDao(get()) }
-    single { DbHelper(get()) }
+    single { org.example.project.features.common.data.database.DbHelper(get()) }
     single { FavoriteRecipeDao(get()) }
 
 }
