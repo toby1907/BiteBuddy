@@ -71,7 +71,11 @@ kotlin {
                         add(projectDirPath)
                     }
                 }
+
+                  
+
             }
+
         }
         binaries.executable()
     }
@@ -89,7 +93,7 @@ kotlin {
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material)
+            implementation(compose.material3)
             implementation(compose.materialIconsExtended)
             implementation(compose.ui)
             implementation(compose.components.resources)
@@ -172,6 +176,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.lifecycle.viewmodel.android)
+    implementation(libs.androidx.runtime.android)
+    implementation(libs.androidx.material3.android)
     debugImplementation(compose.uiTooling)
 }
 
@@ -191,7 +198,7 @@ sqldelight{
     databases{
         create("BiteBuddyAppDb"){
             packageName.set("org.example.project")
-            generateAsync = true
+            generateAsync.set(true)
         }
     }
 }

@@ -1,12 +1,14 @@
 package org.example.project
 
 import android.app.Application
+import org.example.project.dbFactory.DatabaseFactory
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import org.example.project.di.initKoin
 class MainApplication: Application() {
 
     private val androidModules = module {
+        single { DatabaseFactory(applicationContext) }
       /*  single { DatabaseFactory(applicationContext) }
         single { MultiplatformSettingsFactory(applicationContext) }*/
     }

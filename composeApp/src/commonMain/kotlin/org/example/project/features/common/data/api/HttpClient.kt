@@ -1,4 +1,4 @@
-package org.example.project.features.app.common.data.api
+package org.example.project.features.common.data.api
 
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
